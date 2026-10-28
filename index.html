@@ -3,84 +3,108 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog Jurnal Teknologi</title>
-    <!-- Menghubungkan ke file CSS -->
+    <meta name="description" content="Portofolio I Putu Eka Aditya Adi Putra, Web Developer.">
+    <title>I Putu Eka Aditya Adi Putra | Web Developer</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-    <!-- Bagian Header / Judul Blog -->
     <header class="site-header">
-        <h1>Jurnal Teknologi</h1>
-        <p>Berbagi wawasan tentang dunia web, koding, dan server</p>
+        <a class="brand" href="index.html">Eka Aditya<span>.</span></a>
+        <nav class="site-nav" aria-label="Navigasi utama">
+            <a href="index.html" aria-current="page">Beranda</a>
+            <a href="#tentang">Tentang</a>
+            <a href="#pengalaman">Pengalaman</a>
+            <a href="portofolio.html">Portofolio</a>
+            <a href="#kontak">Kontak</a>
+        </nav>
     </header>
 
-    <!-- Bagian Navigasi -->
-    <nav class="site-nav">
-        <a href="index.html">Beranda</a>
-        <a href="#">Tentang</a>
-        <a href="portofolio.html">Portofolio</a>
-        <a href="#">Kontak</a>
-    </nav>
-
-    <!-- Kontainer Utama -->
-    <div class="container">
-        
-        <!-- Bagian Kiri: Area Artikel (Konten Utama) -->
-        <main class="main-content">
-            
-            <!-- Artikel 1 -->
-            <article class="post">
-                <h2 class="post-title">Cara Hosting Website Statis di GitHub Pages</h2>
-                <div class="post-meta">
-                    <span>Oleh: Aditya</span> | <span>26 Oktober 2026</span> | <span>Kategori: Tutorial</span>
+    <main>
+        <!-- ── HERO ────────────────────────────────────────── -->
+        <section class="hero section-wrap">
+            <div class="hero-copy">
+                <p class="eyebrow">Portofolio Web Developer</p>
+                <h1>I Putu Eka<br><span class="gradient-text">Aditya Adi Putra</span></h1>
+                <p class="hero-role">Web Developer</p>
+                <p class="hero-intro">Saya tertarik membangun website dan terus mengembangkan kemampuan di bidang web development. Saya memiliki pengalaman membuat website sekolah dan mengikuti kegiatan asistensi mengajar.</p>
+                <div class="hero-actions">
+                    <a class="button button-primary" href="portofolio.html">Lihat portofolio →</a>
+                    <a class="button button-secondary" href="mailto:adityaid0088@gmail.com">Hubungi saya</a>
                 </div>
-                <p class="post-excerpt">
-                    Memublikasikan website tidak harus mahal. Dengan memanfaatkan GitHub Pages, kita bisa melakukan hosting untuk file HTML, CSS, dan JavaScript secara gratis dengan sangat cepat...
-                </p>
-                <a href="#" class="read-more">Baca Selengkapnya &rarr;</a>
-            </article>
+            </div>
+            <div class="hero-card" aria-label="Ringkasan profil">
+                <span class="hero-mark" aria-hidden="true">EA</span>
+                <p class="card-label">Fokus Saat Ini</p>
+                <h2>Membangun pengalaman web yang bermanfaat.</h2>
+                <p>Terbuka untuk kesempatan kerja dan kolaborasi di bidang web development.</p>
+            </div>
+        </section>
 
-            <!-- Artikel 2 -->
-            <article class="post">
-                <h2 class="post-title">Membangun Server Minecraft Sendiri</h2>
-                <div class="post-meta">
-                    <span>Oleh: Aditya</span> | <span>20 Oktober 2026</span> | <span>Kategori: Server & Gaming</span>
+        <!-- ── TENTANG ─────────────────────────────────────── -->
+        <section class="content-section section-wrap" id="tentang">
+            <div class="section-heading">
+                <p class="eyebrow">Perkenalan</p>
+                <h2>Tentang saya</h2>
+            </div>
+            <div class="about-copy">
+                <p>Saya I Putu Eka Aditya Adi Putra, seorang Web Developer yang memiliki pengalaman selama satu bulan membuat website untuk SMP Negeri 3 Sawan. Saya juga memiliki pengalaman satu bulan mengajar melalui program Asistensi Mengajar Undiksha angkatan 2026.</p>
+                <p>Saat ini saya memiliki keahlian HTML dan terus belajar untuk mengembangkan kemampuan dalam membuat website.</p>
+            </div>
+        </section>
+
+        <!-- ── PENGALAMAN ──────────────────────────────────── -->
+        <section class="content-section section-wrap" id="pengalaman">
+            <div class="section-heading">
+                <p class="eyebrow">Pengalaman</p>
+                <h2>Pengalaman saya</h2>
+            </div>
+            <div class="experience-list">
+                <article class="experience-item">
+                    <div class="experience-period">1 bulan</div>
+                    <div>
+                        <h3>Pembuatan Website Sekolah</h3>
+                        <p class="experience-place">SMP Negeri 3 Sawan</p>
+                        <p>Pengalaman membuat website untuk mendukung kebutuhan informasi sekolah.</p>
+                    </div>
+                </article>
+                <article class="experience-item">
+                    <div class="experience-period">1 bulan</div>
+                    <div>
+                        <h3>Asistensi Mengajar</h3>
+                        <p class="experience-place">Undiksha · Angkatan 2026</p>
+                        <p>Pengalaman mengajar melalui program Asistensi Mengajar Undiksha.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- ── KEAHLIAN ────────────────────────────────────── -->
+        <section class="content-section section-wrap">
+            <div class="section-heading">
+                <p class="eyebrow">Kemampuan</p>
+                <h2>Keahlian</h2>
+            </div>
+            <div class="skill-list" aria-label="Daftar keahlian">
+                <span class="skill-tag">HTML</span>
+            </div>
+        </section>
+
+        <!-- ── KONTAK ──────────────────────────────────────── -->
+        <section class="contact-section" id="kontak">
+            <div class="section-wrap contact-inner">
+                <div>
+                    <p class="eyebrow">Mari Terhubung</p>
+                    <h2>Punya kesempatan atau proyek?</h2>
+                    <p>Saya terbuka untuk berdiskusi mengenai peluang kerja dan kolaborasi.</p>
                 </div>
-                <p class="post-excerpt">
-                    Mempersiapkan plugin, tunneling, dan manajemen sumber daya server adalah hal yang krusial sebelum mengundang pemain lain ke dalam server yang kita buat...
-                </p>
-                <a href="#" class="read-more">Baca Selengkapnya &rarr;</a>
-            </article>
-
-        </main>
-
-        <!-- Bagian Kanan: Sidebar -->
-        <aside class="sidebar">
-            
-            <div class="widget">
-                <h3>Tentang Penulis</h3>
-                <p>Halo, selamat datang di blog saya. Saya sering menulis tentang pengembangan web, teknologi, dan eksplorasi dunia digital.</p>
+                <a class="button button-light" href="mailto:adityaid0088@gmail.com">adityaid0088@gmail.com</a>
             </div>
+        </section>
+    </main>
 
-            <div class="widget">
-                <h3>Kategori Populer</h3>
-                <ul class="category-list">
-                    <li><a href="#">Web Development (12)</a></li>
-                    <li><a href="#">Jaringan & Server (8)</a></li>
-                    <li><a href="#">Desain UI/UX (5)</a></li>
-                    <li><a href="#">Tips & Trik (10)</a></li>
-                </ul>
-            </div>
-
-        </aside>
-
-    </div> <!-- Akhir dari Kontainer Utama -->
-
-    <!-- Bagian Footer -->
     <footer class="site-footer">
-        <p>&copy; 2026 Jurnal Teknologi. Semua hak dilindungi.</p>
+        <p>&copy; 2026 I Putu Eka Aditya Adi Putra</p>
+        <a href="mailto:adityaid0088@gmail.com">Email</a>
     </footer>
-
 </body>
 </html>
