@@ -23,10 +23,10 @@
         <a class="brand" href="index.html">Eka Aditya<span>.</span></a>
         <nav class="site-nav" aria-label="Navigasi utama">
             <a href="index.html" aria-current="page">Beranda</a>
-            <a href="#tentang">Tentang</a>
-            <a href="#pengalaman">Pengalaman</a>
+            <a href="tentang.html">Tentang</a>
+            <a href="pengalaman.html">Pengalaman</a>
             <a href="portofolio.html">Portofolio</a>
-            <a href="#kontak">Kontak</a>
+            <a href="kontak.html">Kontak</a>
         </nav>
     </header>
 
@@ -34,13 +34,13 @@
         <!-- ── HERO ────────────────────────────────────────── -->
         <section class="hero section-wrap">
             <div class="hero-copy">
-                <p class="eyebrow">Portofolio Web Developer</p>
+                <p class="eyebrow">Portofolio Page</p>
                 <h1>I Putu Eka<br><span class="gradient-text">Aditya Adi Putra</span></h1>
                 <p class="hero-role">Web Developer</p>
                 <p class="hero-intro">Saya tertarik membangun website dan terus mengembangkan kemampuan di bidang web development. Saya memiliki pengalaman membuat website sekolah dan mengikuti kegiatan asistensi mengajar.</p>
                 <div class="hero-actions">
                     <a class="button button-primary" href="portofolio.html">Lihat portofolio →</a>
-                    <a class="button button-secondary" href="mailto:adityaid0088@gmail.com">Hubungi saya</a>
+                    <a class="button button-secondary" href="kontak.html">Hubungi saya</a>
                 </div>
             </div>
             <div class="hero-card" aria-label="Ringkasan profil">
@@ -50,89 +50,25 @@
                 <p>Terbuka untuk kesempatan kerja dan kolaborasi di bidang web development.</p>
             </div>
         </section>
-
-        <!-- ── TENTANG ─────────────────────────────────────── -->
-        <section class="content-section section-wrap" id="tentang">
-            <div class="section-heading">
-                <p class="eyebrow">Perkenalan</p>
-                <h2>Tentang saya</h2>
-            </div>
-            <div class="about-copy">
-                <p>Saya I Putu Eka Aditya Adi Putra, seorang Web Developer yang memiliki pengalaman selama satu bulan membuat website untuk SMP Negeri 3 Sawan. Saya juga memiliki pengalaman satu bulan mengajar melalui program Asistensi Mengajar Undiksha angkatan 2026.</p>
-                <p>Saat ini saya memiliki keahlian HTML dan terus belajar untuk mengembangkan kemampuan dalam membuat website.</p>
-            </div>
-        </section>
-
-        <!-- ── PENGALAMAN ──────────────────────────────────── -->
-        <section class="content-section section-wrap" id="pengalaman">
-            <div class="section-heading">
-                <p class="eyebrow">Pengalaman</p>
-                <h2>Pengalaman saya</h2>
-            </div>
-            <div class="experience-list">
-                <article class="experience-item">
-                    <div class="experience-period">1 bulan</div>
-                    <div>
-                        <h3>Pembuatan Website Sekolah</h3>
-                        <p class="experience-place">SMP Negeri 3 Sawan</p>
-                        <p>Pengalaman membuat website untuk mendukung kebutuhan informasi sekolah.</p>
-                    </div>
-                </article>
-                <article class="experience-item">
-                    <div class="experience-period">1 bulan</div>
-                    <div>
-                        <h3>Asistensi Mengajar</h3>
-                        <p class="experience-place">Undiksha · Angkatan 2026</p>
-                        <p>Pengalaman mengajar melalui program Asistensi Mengajar Undiksha.</p>
-                    </div>
-                </article>
-            </div>
-        </section>
-
-        <!-- ── KEAHLIAN ────────────────────────────────────── -->
-        <section class="content-section section-wrap">
-            <div class="section-heading">
-                <p class="eyebrow">Kemampuan</p>
-                <h2>Keahlian</h2>
-            </div>
-            <div class="skill-list" aria-label="Daftar keahlian">
-                <span class="skill-tag">HTML</span>
-            </div>
-        </section>
-
-        <!-- ── KONTAK ──────────────────────────────────────── -->
-        <section class="contact-section" id="kontak">
-            <div class="section-wrap contact-inner">
-                <div>
-                    <p class="eyebrow">Mari Terhubung</p>
-                    <h2>Punya kesempatan atau proyek?</h2>
-                    <p>Saya terbuka untuk berdiskusi mengenai peluang kerja dan kolaborasi.</p>
-                </div>
-                <a class="button button-light" href="mailto:adityaid0088@gmail.com">adityaid0088@gmail.com</a>
-            </div>
-        </section>
     </main>
 
     <footer class="site-footer">
         <p>&copy; 2026 I Putu Eka Aditya Adi Putra</p>
-        <a href="mailto:adityaid0088@gmail.com">Email</a>
+        <a href="kontak.html">Kontak</a>
     </footer>
 
     <!-- ── PARTICLE ANIMATION SCRIPT ────────────────────── -->
     <script>
     (function () {
         const canvas = document.getElementById('particleCanvas');
-        const ctx    = canvas.getContext('2d');
-
+        if (!canvas) return;
+        const ctx = canvas.getContext('2d');
         let W, H, particles, mouse = { x: -9999, y: -9999 };
 
         const CONFIG = {
-            count:       70,
-            maxDist:     130,
-            speed:       0.45,
-            radius:      1.8,
-            colors:      ['#00d4aa', '#0ea5e9', '#7c3aed'],
-            mouseRadius: 120,
+            count: 70, maxDist: 130, speed: 0.45,
+            radius: 1.8, mouseRadius: 120,
+            colors: ['#00d4aa', '#0ea5e9', '#7c3aed'],
         };
 
         function resize() {
@@ -151,31 +87,24 @@
                 this.alpha = Math.random() * 0.5 + 0.2;
             };
             this.reset();
-
             this.update = function () {
-                // Mouse repulsion
-                const dx = this.x - mouse.x;
-                const dy = this.y - mouse.y;
-                const dist = Math.sqrt(dx * dx + dy * dy);
-                if (dist < CONFIG.mouseRadius) {
+                const dx = this.x - mouse.x, dy = this.y - mouse.y;
+                const dist = Math.hypot(dx, dy);
+                if (dist < CONFIG.mouseRadius && dist > 0) {
                     const force = (CONFIG.mouseRadius - dist) / CONFIG.mouseRadius * 0.8;
                     this.x += (dx / dist) * force * 3;
                     this.y += (dy / dist) * force * 3;
                 }
-
-                this.x += this.vx;
-                this.y += this.vy;
-
+                this.x += this.vx; this.y += this.vy;
                 if (this.x < -20) this.x = W + 20;
                 if (this.x > W + 20) this.x = -20;
                 if (this.y < -20) this.y = H + 20;
                 if (this.y > H + 20) this.y = -20;
             };
-
             this.draw = function () {
                 ctx.save();
                 ctx.globalAlpha = this.alpha;
-                ctx.fillStyle   = this.color;
+                ctx.fillStyle = this.color;
                 ctx.beginPath();
                 ctx.arc(this.x, this.y, this.r, 0, Math.PI * 2);
                 ctx.fill();
@@ -191,14 +120,12 @@
             for (let i = 0; i < particles.length; i++) {
                 for (let j = i + 1; j < particles.length; j++) {
                     const a = particles[i], b = particles[j];
-                    const dx = a.x - b.x, dy = a.y - b.y;
-                    const d  = Math.sqrt(dx * dx + dy * dy);
+                    const d = Math.hypot(a.x - b.x, a.y - b.y);
                     if (d < CONFIG.maxDist) {
-                        const opacity = (1 - d / CONFIG.maxDist) * 0.25;
                         ctx.save();
-                        ctx.globalAlpha = opacity;
+                        ctx.globalAlpha = (1 - d / CONFIG.maxDist) * 0.22;
                         ctx.strokeStyle = a.color;
-                        ctx.lineWidth   = 0.6;
+                        ctx.lineWidth = 0.6;
                         ctx.beginPath();
                         ctx.moveTo(a.x, a.y);
                         ctx.lineTo(b.x, b.y);
@@ -217,18 +144,10 @@
         }
 
         window.addEventListener('resize', () => { resize(); init(); });
-        document.addEventListener('mousemove', e => {
-            mouse.x = e.clientX;
-            mouse.y = e.clientY;
-        });
-        document.addEventListener('mouseleave', () => {
-            mouse.x = -9999;
-            mouse.y = -9999;
-        });
+        document.addEventListener('mousemove', e => { mouse.x = e.clientX; mouse.y = e.clientY; });
+        document.addEventListener('mouseleave', () => { mouse.x = -9999; mouse.y = -9999; });
 
-        resize();
-        init();
-        loop();
+        resize(); init(); loop();
     })();
     </script>
 </body>
