@@ -72,9 +72,124 @@ body::after {
     z-index: 0;
 }
 
+/* ── ANIMATED BACKGROUND CONTAINER ────────────────────── */
+.bg-canvas {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+#particleCanvas {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.6;
+}
+
+/* ── GRADIENT ORBS ─────────────────────────────────────── */
+.orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    animation: orb-float linear infinite;
+    will-change: transform;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+.orb-1 {
+    width: 600px;
+    height: 600px;
+    top: -15%;
+    left: -10%;
+    background: radial-gradient(circle, rgba(0,212,170,0.18) 0%, transparent 70%);
+    animation-name: orb-float-1;
+    animation-duration: 22s;
+    animation-delay: 0.3s;
+}
+
+.orb-2 {
+    width: 500px;
+    height: 500px;
+    top: 30%;
+    right: -10%;
+    background: radial-gradient(circle, rgba(124,58,237,0.15) 0%, transparent 70%);
+    animation-name: orb-float-2;
+    animation-duration: 28s;
+    animation-delay: 0.5s;
+}
+
+.orb-3 {
+    width: 400px;
+    height: 400px;
+    bottom: 10%;
+    left: 20%;
+    background: radial-gradient(circle, rgba(14,165,233,0.12) 0%, transparent 70%);
+    animation-name: orb-float-3;
+    animation-duration: 20s;
+    animation-delay: 0.8s;
+}
+
+.orb-4 {
+    width: 300px;
+    height: 300px;
+    top: 60%;
+    right: 25%;
+    background: radial-gradient(circle, rgba(0,212,170,0.1) 0%, transparent 70%);
+    animation-name: orb-float-4;
+    animation-duration: 35s;
+    animation-delay: 0.2s;
+}
+
+@keyframes orb-float-1 {
+    0%   { opacity: 0; transform: translate(0, 0) scale(1); }
+    5%   { opacity: 1; }
+    50%  { transform: translate(80px, 60px) scale(1.1); }
+    100% { opacity: 1; transform: translate(0, 0) scale(1); }
+}
+
+@keyframes orb-float-2 {
+    0%   { opacity: 0; transform: translate(0, 0) scale(1); }
+    5%   { opacity: 1; }
+    33%  { transform: translate(-60px, 80px) scale(1.08); }
+    66%  { transform: translate(-90px, -40px) scale(0.95); }
+    100% { opacity: 1; transform: translate(0, 0) scale(1); }
+}
+
+@keyframes orb-float-3 {
+    0%   { opacity: 0; transform: translate(0, 0) scale(1); }
+    5%   { opacity: 1; }
+    40%  { transform: translate(70px, -50px) scale(1.12); }
+    80%  { transform: translate(-40px, 30px) scale(0.92); }
+    100% { opacity: 1; transform: translate(0, 0) scale(1); }
+}
+
+@keyframes orb-float-4 {
+    0%   { opacity: 0; transform: translate(0, 0) scale(1); }
+    5%   { opacity: 1; }
+    25%  { transform: translate(-50px, -70px) scale(1.05); }
+    75%  { transform: translate(60px, 40px) scale(1.1); }
+    100% { opacity: 1; transform: translate(0, 0) scale(1); }
+}
+
+/* ── SUBTLE GRID OVERLAY ───────────────────────────────── */
+.grid-overlay {
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
+    background-size: 60px 60px;
+    mask-image: radial-gradient(ellipse 80% 60% at 50% 30%, black 30%, transparent 100%);
+    -webkit-mask-image: radial-gradient(ellipse 80% 60% at 50% 30%, black 30%, transparent 100%);
+}
+
 main, header, footer {
     position: relative;
-    z-index: 1;
+    z-index: 2;
 }
 
 a {
